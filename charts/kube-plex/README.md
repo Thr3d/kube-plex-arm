@@ -28,7 +28,7 @@ The following tables lists the configurable parameters of the Plex chart and the
 | `ingress.hosts`                | Ingress accepted hostnames | `chart-example.local` |
 | `ingress.tls`                  | Ingress TLS configuration | `[]` |
 | `rbac.create`                  | Create RBAC roles? | `true` |
-| `nodeSelector`             | Node labels for pod assignment | `beta.kubernetes.io/arch: amd64` |
+| `nodeSelector`             | Node labels for pod assignment | `beta.kubernetes.io/arch: arm` |
 | `persistence.transcode.enabled`      | Use persistent volume for transcoding | `false` |
 | `persistence.transcode.size`         | Size of persistent volume claim | `20Gi` |
 | `persistence.transcode.claimName`| Use an existing PVC to persist data | `nil` |

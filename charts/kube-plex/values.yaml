@@ -2,14 +2,14 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 image:
-  repository: plexinc/pms-docker
+  repository: deadops/pms-docker-arm
   tag: 1.16.0.1226-7eb2c8f6f
-  pullPolicy: IfNotPresent
+  pullPolicy: Always
 
 kubePlex:
   enabled: true
   image:
-    repository: quay.io/munnerz/kube-plex
+    repository: deadops/kube-plex-arm
     tag: latest
     pullPolicy: Always
 
@@ -17,7 +17,7 @@ kubePlex:
 claimToken: ""
 
 # Set the timezone of the plex server
-timezone: Europe/London
+timezone: America/Denver
 
 service:
   type: ClusterIP
@@ -61,7 +61,7 @@ rbac:
   ## serviceAccountName: ""
 
 nodeSelector:
-  beta.kubernetes.io/arch: amd64
+  beta.kubernetes.io/arch: arm
 
 persistence:
   transcode:
